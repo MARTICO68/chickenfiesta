@@ -94,150 +94,195 @@
     <!-- ======= Contenido ======= -->
     <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-      <!-- ======= PIZZAS ======= -->
-<div class="col-lg-4 col-md-6 portfolio-item filter-pizzas">
-  <div class="portfolio-wrap position-relative shadow-lg rounded-4 overflow-hidden">
-    <!-- Imagen del producto -->
-    <img src="assets/img/pizza1.jpeg" class="img-fluid" alt="Pizzas Chicken Fiesta" style="transition: transform 0.4s ease;">
+  <!-- ======= PIZZAS ======= -->
+<!-- ======= PIZZAS ======= -->
+<div class="row">
 
-    <!-- Capa de información -->
-    <div class="portfolio-info text-center p-4" style="
-      background: rgba(0, 0, 0, 0.75);
-      color: #fff;
-    ">
-      <h4 class="fw-bold" style="color: #fff;">Pizzas</h4>
-      <p class="mb-2" style="color: #eee;">PIZZA PEQUEÑA 6 SLICES + PEPSI DE 1.5</p>
+  <!-- 🍕 PIZZA PEQUEÑA -->
+  <div class="col-lg-4 col-md-6 portfolio-item filter-pizzas">
+    <div class="portfolio-wrap position-relative shadow-lg rounded-4 overflow-hidden">
+      <img src="assets/img/pizza1.jpeg" class="img-fluid" alt="Pizza Pequeña Chicken Fiesta">
 
-      <!-- Precio atractivo -->
-      <div class="price-tag mx-auto mb-3" style="
-        background: linear-gradient(135deg, #ffb300, #ff6f00);
-        color: #fff;
-        font-weight: 700;
-        border-radius: 25px;
-        padding: 10px 24px;
-        display: inline-block;
-        font-size: 1.1rem;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.4);
-      ">
-       ¢6500
+      <div class="portfolio-info text-center p-4" style="background: rgba(0, 0, 0, 0.8); color: #fff;">
+        <h4 class="fw-bold">Pizza Pequeña</h4>
+        <p class="mb-2" style="color: #eee;">6 Slices + Pepsi de 1.5L</p>
+
+        <!-- Selector de sabor -->
+        <div class="mb-3">
+          <select id="saborPizzaPeq" class="form-select text-center fw-bold" style="
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
+            padding: 8px;
+            max-width: 230px;
+            margin: 0 auto;
+          ">
+            <option value="Jamón">Jamón</option>
+            <option value="Pepperoni">Pepperoni</option>
+            <option value="Pollo BBQ">Pollo BBQ</option>
+            <option value="Hawaiana">Hawaiana</option>
+            <option value="Suprema">Suprema</option>
+          </select>
+        </div>
+
+        <!-- Precio -->
+        <div class="price-tag mx-auto mb-3" style="
+          background: linear-gradient(135deg, #ffb300, #ff6f00);
+          color: #fff;
+          font-weight: 700;
+          border-radius: 25px;
+          padding: 10px 24px;
+          display: inline-block;
+          font-size: 1.1rem;
+          box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+        ">¢6500</div>
+
+        <!-- Botones -->
+        <div class="portfolio-links mt-3">
+          <a href="assets/img/pizza1.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" style="color:#fff; font-size:1.6rem; margin-right:10px;">
+            <i class="bx bx-plus"></i>
+          </a>
+
+          <a id="btnPizzaPeq" href="#" target="_blank" class="btn rounded-pill px-4 py-2 shadow-sm" 
+             style="background:#25D366; border:none; color:white; font-weight:600;">
+            <i class="bx bxl-whatsapp"></i> Pedir
+          </a>
+        </div>
       </div>
+    </div>
+  </div>
 
-      <!-- Botones -->
-      <div class="portfolio-links mt-3">
-        <a href="assets/img/pizza1.jpeg" 
-           data-gallery="portfolioGallery" 
-           class="portfolio-lightbox" 
-           title="Pizzas Chicken Fiesta" 
-           style="color:#fff; font-size:1.6rem; margin-right:10px;">
-          <i class="bx bx-plus"></i>
-        </a>
+  <!-- 🍕 PIZZA MEDIANA -->
+  <div class="col-lg-4 col-md-6 portfolio-item filter-pizzas">
+    <div class="portfolio-wrap position-relative shadow-lg rounded-4 overflow-hidden">
+      <img src="assets/img/pizza1.jpeg" class="img-fluid" alt="Pizza Mediana Chicken Fiesta">
 
-        <a href="https://wa.me/50685842963?text=Hola%2C%20quiero%20pedir%20una%20Pizza%20de%20Chicken%20Fiesta%20🍕" 
-           target="_blank" 
-           class="btn rounded-pill px-4 py-2 shadow-sm" 
-           style="background:#25D366; border:none; color:white; font-weight:600;">
-          <i class="bx bxl-whatsapp"></i> Pedir
-        </a>
+      <div class="portfolio-info text-center p-4" style="background: rgba(0, 0, 0, 0.8); color: #fff;">
+        <h4 class="fw-bold">Pizza Mediana</h4>
+        <p class="mb-2" style="color: #eee;">8 Slices + Pepsi de 1.5L</p>
+
+        <!-- Selector -->
+        <div class="mb-3">
+          <select id="saborPizzaMed" class="form-select text-center fw-bold" style="
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
+            padding: 8px;
+            max-width: 230px;
+            margin: 0 auto;
+          ">
+            <option value="Jamón">Jamón</option>
+            <option value="Pepperoni">Pepperoni</option>
+            <option value="Pollo BBQ">Pollo BBQ</option>
+            <option value="Hawaiana">Hawaiana</option>
+            <option value="Suprema">Suprema</option>
+          </select>
+        </div>
+
+        <!-- Precio -->
+        <div class="price-tag mx-auto mb-3" style="
+          background: linear-gradient(135deg, #ffb300, #ff6f00);
+          color: #fff;
+          font-weight: 700;
+          border-radius: 25px;
+          padding: 10px 24px;
+          display: inline-block;
+          font-size: 1.1rem;
+          box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+        ">¢8500</div>
+
+        <div class="portfolio-links mt-3">
+          <a href="assets/img/pizza1.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" style="color:#fff; font-size:1.6rem; margin-right:10px;">
+            <i class="bx bx-plus"></i>
+          </a>
+
+          <a id="btnPizzaMed" href="#" target="_blank" class="btn rounded-pill px-4 py-2 shadow-sm" 
+             style="background:#25D366; border:none; color:white; font-weight:600;">
+            <i class="bx bxl-whatsapp"></i> Pedir
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🍕 PIZZA EXTRA GRANDE -->
+  <div class="col-lg-4 col-md-6 portfolio-item filter-pizzas">
+    <div class="portfolio-wrap position-relative shadow-lg rounded-4 overflow-hidden">
+      <img src="assets/img/pizza1.jpeg" class="img-fluid" alt="Pizza Extra Grande Chicken Fiesta">
+
+      <div class="portfolio-info text-center p-4" style="background: rgba(0, 0, 0, 0.8); color: #fff;">
+        <h4 class="fw-bold">Pizza Extra Grande</h4>
+        <p class="mb-2" style="color: #eee;">16 Slices + Pepsi de 2.5L</p>
+
+        <!-- Selector -->
+        <div class="mb-3">
+          <select id="saborPizzaXL" class="form-select text-center fw-bold" style="
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
+            padding: 8px;
+            max-width: 230px;
+            margin: 0 auto;
+          ">
+            <option value="Jamón">Jamón</option>
+            <option value="Pepperoni">Pepperoni</option>
+            <option value="Pollo BBQ">Pollo BBQ</option>
+            <option value="Hawaiana">Hawaiana</option>
+            <option value="Suprema">Suprema</option>
+          </select>
+        </div>
+
+        <!-- Precio -->
+        <div class="price-tag mx-auto mb-3" style="
+          background: linear-gradient(135deg, #ffb300, #ff6f00);
+          color: #fff;
+          font-weight: 700;
+          border-radius: 25px;
+          padding: 10px 24px;
+          display: inline-block;
+          font-size: 1.1rem;
+          box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+        ">¢10500</div>
+
+        <div class="portfolio-links mt-3">
+          <a href="assets/img/pizza1.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" style="color:#fff; font-size:1.6rem; margin-right:10px;">
+            <i class="bx bx-plus"></i>
+          </a>
+
+          <a id="btnPizzaXL" href="#" target="_blank" class="btn rounded-pill px-4 py-2 shadow-sm" 
+             style="background:#25D366; border:none; color:white; font-weight:600;">
+            <i class="bx bxl-whatsapp"></i> Pedir
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="col-lg-4 col-md-6 portfolio-item filter-pizzas">
-  <div class="portfolio-wrap position-relative shadow-lg rounded-4 overflow-hidden">
-    <!-- Imagen del producto -->
-    <img src="assets/img/pizza1.jpeg" class="img-fluid" alt="Pizzas Chicken Fiesta" style="transition: transform 0.4s ease;">
+<!-- Script para actualizar WhatsApp según sabor -->
+<script>
+  function configurarBotonPizza(selectId, btnId, tamano) {
+    const select = document.getElementById(selectId);
+    const btn = document.getElementById(btnId);
 
-    <!-- Capa de información -->
-    <div class="portfolio-info text-center p-4" style="
-      background: rgba(0, 0, 0, 0.75);
-      color: #fff;
-    ">
-      <h4 class="fw-bold" style="color: #fff;">Pizzas</h4>
-      <p class="mb-2" style="color: #eee;">PIZZA MEDIANA 8 SLICES + PEPSI DE 1.5</p>
+    function actualizarEnlace() {
+      const sabor = encodeURIComponent(select.value);
+      const texto = `Hola%2C%20quiero%20pedir%20una%20Pizza%20${tamano}%20de%20${sabor}%20🍕`;
+      btn.href = `https://wa.me/50685842963?text=${texto}`;
+    }
 
-      <!-- Precio atractivo -->
-      <div class="price-tag mx-auto mb-3" style="
-        background: linear-gradient(135deg, #ffb300, #ff6f00);
-        color: #fff;
-        font-weight: 700;
-        border-radius: 25px;
-        padding: 10px 24px;
-        display: inline-block;
-        font-size: 1.1rem;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.4);
-      ">
-       ¢8500
-      </div>
+    select.addEventListener('change', actualizarEnlace);
+    actualizarEnlace(); // Inicializa con el valor por defecto
+  }
 
-      <!-- Botones -->
-      <div class="portfolio-links mt-3">
-        <a href="assets/img/pizza1.jpeg" 
-           data-gallery="portfolioGallery" 
-           class="portfolio-lightbox" 
-           title="Pizzas Chicken Fiesta" 
-           style="color:#fff; font-size:1.6rem; margin-right:10px;">
-          <i class="bx bx-plus"></i>
-        </a>
+  configurarBotonPizza('saborPizzaPeq', 'btnPizzaPeq', 'Pequeña');
+  configurarBotonPizza('saborPizzaMed', 'btnPizzaMed', 'Mediana');
+  configurarBotonPizza('saborPizzaXL', 'btnPizzaXL', 'Extra%20Grande');
+</script>
 
-        <a href="https://wa.me/50685842963?text=Hola%2C%20quiero%20pedir%20una%20Pizza%20de%20Chicken%20Fiesta%20🍕" 
-           target="_blank" 
-           class="btn rounded-pill px-4 py-2 shadow-sm" 
-           style="background:#25D366; border:none; color:white; font-weight:600;">
-          <i class="bx bxl-whatsapp"></i> Pedir
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-4 col-md-6 portfolio-item filter-pizzas">
-  <div class="portfolio-wrap position-relative shadow-lg rounded-4 overflow-hidden">
-    <!-- Imagen del producto -->
-    <img src="assets/img/pizza1.jpeg" class="img-fluid" alt="Pizzas Chicken Fiesta" style="transition: transform 0.4s ease;">
-
-    <!-- Capa de información -->
-    <div class="portfolio-info text-center p-4" style="
-      background: rgba(0, 0, 0, 0.75);
-      color: #fff;
-    ">
-      <h4 class="fw-bold" style="color: #fff;">Pizzas</h4>
-      <p class="mb-2" style="color: #eee;">PIZZA EXTRA GRANDE 16 SLICES + PEPSI DE 2.5</p>
-
-      <!-- Precio atractivo -->
-      <div class="price-tag mx-auto mb-3" style="
-        background: linear-gradient(135deg, #ffb300, #ff6f00);
-        color: #fff;
-        font-weight: 700;
-        border-radius: 25px;
-        padding: 10px 24px;
-        display: inline-block;
-        font-size: 1.1rem;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.4);
-      ">
-       ¢10500
-      </div>
-
-      <!-- Botones -->
-      <div class="portfolio-links mt-3">
-        <a href="assets/img/pizza1.jpeg" 
-           data-gallery="portfolioGallery" 
-           class="portfolio-lightbox" 
-           title="Pizzas Chicken Fiesta" 
-           style="color:#fff; font-size:1.6rem; margin-right:10px;">
-          <i class="bx bx-plus"></i>
-        </a>
-
-        <a href="https://wa.me/50685842963?text=Hola%2C%20quiero%20pedir%20una%20Pizza%20de%20Chicken%20Fiesta%20🍕" 
-           target="_blank" 
-           class="btn rounded-pill px-4 py-2 shadow-sm" 
-           style="background:#25D366; border:none; color:white; font-weight:600;">
-          <i class="bx bxl-whatsapp"></i> Pedir
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
 
 
       <!-- ======= COMIDAS ======= -->
