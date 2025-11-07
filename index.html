@@ -85,7 +85,8 @@
         <ul id="portfolio-flters">
           <li data-filter="*" class="filter-active">Todos</li>
           <li data-filter=".filter-pizzas">Pizzas</li>
-          <li data-filter=".filter-comidas">Comidas</li>
+          <li data-filter=".filter-arroz">Arroz Cantones</li>
+          <li data-filter=".filter-comidas">comidas</li>
           <li data-filter=".filter-combos">Combos</li>
         </ul>
       </div>
@@ -212,68 +213,366 @@ function actualizarDescripcionYLink() {
 
 
 
-      <!-- ======= COMIDAS ======= -->
-      <div class="col-lg-4 col-md-6 portfolio-item filter-comidas">
-        <div class="portfolio-wrap">
-          <img src="assets/img/menu/hamburguesa.jpg" class="img-fluid" alt="Hamburguesas Chicken Fiesta">
-          <div class="portfolio-info">
-            <h4>Hamburguesas y más</h4>
-            <p>Desde ₡1500 — ¡con papas incluidas!</p>
-            <div class="portfolio-links">
-              <a href="assets/img/menu/hamburguesa.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Hamburguesas Chicken Fiesta"><i class="bx bx-plus"></i></a>
-              <a href="https://wa.me/50685842963?text=Hola%2C%20quiero%20pedir%20una%20Hamburguesa%20de%20Chicken%20Fiesta%20🍔" target="_blank" class="btn btn-success mt-2"><i class="bx bxl-whatsapp"></i> Pedir</a>
-            </div>
-          </div>
-        </div>
+
+      <!-- ======= ARROZ ======= -->
+<div class="col-lg-4 col-md-6 portfolio-item filter-arroz">
+  <div class="portfolio-wrap position-relative shadow-lg rounded-4 overflow-hidden">
+    <!-- Imagen del producto -->
+    <img src="assets/img/cantones.jpg" class="img-fluid" alt="Arroz Chicken Fiesta" style="transition: transform 0.4s ease;">
+
+    <!-- Capa de información -->
+    <div class="portfolio-info text-center p-3" style="
+      background: rgba(0, 0, 0, 0.75); 
+      color: #fff; 
+      font-size: 0.85rem;
+      line-height: 1.2;
+    ">
+      <p class="mb-1" style="color: #eee;">Seleccioná tu tipo y tamaño 🍚</p>
+
+      <!-- Selector de tipo -->
+      <select id="arrozTipo" class="form-select text-center mb-2" style="
+        background: #222;
+        color: #fff;
+        border: 1px solid #ffb300;
+        border-radius: 20px;
+        padding: 6px;
+        width: 80%;
+        margin: auto;
+        font-size: 0.8rem;
+      " onchange="actualizarDescripcionYLinkArroz()">
+        <option value="">-- Elegí el tipo --</option>
+        <option value="Cantones">Cantones</option>
+        <option value="Fiesta">Fiesta (Cantones con camarones)</option>
+      </select>
+
+      <!-- Selector de tamaño -->
+      <select id="arrozTamano" class="form-select text-center mb-2" style="
+        background: #222;
+        color: #fff;
+        border: 1px solid #ffb300;
+        border-radius: 20px;
+        padding: 6px;
+        width: 80%;
+        margin: auto;
+        font-size: 0.8rem;
+      " onchange="actualizarDescripcionYLinkArroz()">
+        <option value="">-- Elegí el tamaño --</option>
+      </select>
+
+      <!-- Ingredientes dinámicos -->
+      <div id="ingredientesArrozTexto" class="mb-2" style="
+        min-height: 30px; 
+        font-style: italic; 
+        color: #ffca3a; 
+        font-size: 0.8rem;
+      "></div>
+
+      <!-- Precios -->
+      <div id="precioArroz" class="price-tag mx-auto mb-1" style="
+        background: linear-gradient(135deg, #ffb300, #ff6f00);
+        color: #fff;
+        font-weight: 700;
+        border-radius: 25px;
+        padding: 6px 18px;
+        display: inline-block;
+        font-size: 0.9rem;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+      ">
+        Medio ₡2700 | Entero ₡3500
       </div>
 
-      <div class="col-lg-4 col-md-6 portfolio-item filter-comidas">
-        <div class="portfolio-wrap">
-          <img src="assets/img/menu/arroz.jpg" class="img-fluid" alt="Arroz Chicken Fiesta">
-          <div class="portfolio-info">
-            <h4>Arroz Cantonés y Fiesta</h4>
-            <p>Desde ₡2700 | Con camarones ₡4000</p>
-            <div class="portfolio-links">
-              <a href="assets/img/menu/arroz.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Arroz Chicken Fiesta"><i class="bx bx-plus"></i></a>
-              <a href="https://wa.me/50685842963?text=Hola%2C%20quiero%20pedir%20un%20Arroz%20Canton%C3%A9s%20de%20Chicken%20Fiesta%20🍛" target="_blank" class="btn btn-success mt-2"><i class="bx bxl-whatsapp"></i> Pedir</a>
-            </div>
-          </div>
-        </div>
+      <!-- Botón WhatsApp -->
+      <div class="portfolio-links mt-2">
+        <a id="whatsappLinkArroz" 
+           href="https://wa.me/50685842963?text=Hola%2C%20quiero%20pedir%20un%20Arroz%20🍚" 
+           target="_blank" 
+           class="btn rounded-pill px-3 py-1 shadow-sm" 
+           style="background:#25D366; border:none; color:white; font-weight:600; font-size:0.85rem;">
+          <i class="bx bxl-whatsapp"></i> Pedir
+        </a>
       </div>
-
-      <!-- ======= COMBOS ======= -->
-      <div class="col-lg-4 col-md-6 portfolio-item filter-combos">
-        <div class="portfolio-wrap">
-          <img src="assets/img/menu/combos.jpg" class="img-fluid" alt="Combos Chicken Fiesta">
-          <div class="portfolio-info">
-            <h4>Combos Chicken Fiesta</h4>
-            <p>Desde ₡2900 — ¡Hamburguesas, pollo y papas!</p>
-            <div class="portfolio-links">
-              <a href="assets/img/menu/combos.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Combos Chicken Fiesta"><i class="bx bx-plus"></i></a>
-              <a href="https://wa.me/50685842963?text=Hola%2C%20quiero%20pedir%20un%20Combo%20de%20Chicken%20Fiesta%20🍗" target="_blank" class="btn btn-success mt-2"><i class="bx bxl-whatsapp"></i> Pedir</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ======= ALITAS ======= -->
-      <div class="col-lg-4 col-md-6 portfolio-item filter-comidas">
-        <div class="portfolio-wrap">
-          <img src="assets/img/menu/alitas.jpg" class="img-fluid" alt="Alitas Chicken Fiesta">
-          <div class="portfolio-info">
-            <h4>Alitas con Papas</h4>
-            <p>6 piezas ₡3500 | 10 piezas ₡5500</p>
-            <div class="portfolio-links">
-              <a href="assets/img/menu/alitas.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Alitas Chicken Fiesta"><i class="bx bx-plus"></i></a>
-              <a href="https://wa.me/50685842963?text=Hola%2C%20quiero%20pedir%20unas%20Alitas%20con%20Papas%20de%20Chicken%20Fiesta%20🔥" target="_blank" class="btn btn-success mt-2"><i class="bx bxl-whatsapp"></i> Pedir</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
-
   </div>
+</div>
+
+<script>
+function actualizarDescripcionYLinkArroz() {
+  const tipo = document.getElementById("arrozTipo").value;
+  const tamanoSelect = document.getElementById("arrozTamano");
+  const texto = document.getElementById("ingredientesArrozTexto");
+  const precioTag = document.getElementById("precioArroz");
+  const link = document.getElementById("whatsappLinkArroz");
+
+  // Ingredientes por tipo
+  const ingredientes = {
+    "Cantones": "🥢 Arroz con jamón, pollo, vegetales y salsa china.",
+    "Fiesta": "🍤 Arroz cantonés con camarones."
+  };
+
+  // Precios por tipo
+  const precios = {
+    "Cantones": { medio: 2700, entero: 3500 },
+    "Fiesta": { medio: 3000, entero: 4000 }
+  };
+
+  // Actualizar opciones de tamaño según el tipo seleccionado
+  tamanoSelect.innerHTML = '<option value="">-- Elegí el tamaño --</option>';
+  if (tipo && precios[tipo]) {
+    tamanoSelect.innerHTML += `<option value="Medio ₡${precios[tipo].medio}">Medio - ₡${precios[tipo].medio}</option>`;
+    tamanoSelect.innerHTML += `<option value="Entero ₡${precios[tipo].entero}">Entero - ₡${precios[tipo].entero}</option>`;
+  }
+
+  // Mostrar ingredientes
+  texto.innerHTML = tipo ? ingredientes[tipo] : "";
+
+  // Mostrar precios en la etiqueta
+  if (tipo) {
+    precioTag.innerHTML = `Medio ₡${precios[tipo].medio} | Entero ₡${precios[tipo].entero}`;
+  } else {
+    precioTag.innerHTML = `Medio ₡2700 | Entero ₡3500`;
+  }
+
+  // Obtener tamaño seleccionado
+  const tamano = tamanoSelect.value;
+
+  // Crear mensaje para WhatsApp
+  let mensaje = "Hola, quiero pedir un Arroz 🍚";
+  if (tipo) mensaje += " tipo " + tipo;
+  if (tamano) mensaje += " tamaño " + tamano;
+
+  // Actualizar enlace de WhatsApp
+  link.href = "https://wa.me/50685842963?text=" + encodeURIComponent(mensaje);
+}
+</script>
+
+
+<!-- ======= HAMBURGUESAS ======= -->
+<!-- puedes copiar el mismo formato para cada uno cambiando nombres, precios y opciones -->
+
+<!-- ================= COMIDAS ================= -->
+
+<!-- HAMBURGUESAS -->
+<!-- ==================== SECCIÓN COMIDAS ==================== -->
+<!-- Cada producto mantiene el mismo diseño del bloque de pizzas -->
+
+<!-- 🍔 HAMBURGUESAS -->
+<div class="col-lg-4 col-md-6 portfolio-item filter-comidas">
+  <div class="portfolio-wrap position-relative shadow-lg rounded-4 overflow-hidden">
+    <img src="assets/img/ambu.jpg" class="img-fluid" alt="Hamburguesas" style="transition: transform 0.4s ease;">
+    <div class="portfolio-info text-center p-3" style="background: rgba(0, 0, 0, 0.75); color: #fff; font-size: 0.85rem;">
+      <p class="mb-1" style="color: #eee;">🍔 Seleccioná tu tipo de hamburguesa</p>
+
+      <select id="hamburguesaTipo" class="form-select text-center mb-2" style="background:#222;color:#fff;border:1px solid #ffb300;border-radius:20px;padding:6px;width:80%;margin:auto;font-size:0.8rem;" onchange="actualizarComidaLink('hamburguesa')">
+        <option value="">-- Elegí una opción --</option>
+        <option value="Hamburguesa sencilla con papas ¢2500">Hamburguesa sencilla con papas ¢2500</option>
+        <option value="Hamburguesa doble ¢2800">Hamburguesa doble ¢2800</option>
+        <option value="Hamburguesa de pollo ¢3500">Hamburguesa de pollo ¢3500</option>
+        <option value="Hamburguesa de pescado ¢3300">Hamburguesa de pescado ¢3300</option>
+        <option value="Hamburguesa especial ¢3000">Hamburguesa especial ¢3000</option>
+      </select>
+
+      <a id="whatsappHamburguesa" href="https://wa.me/50685842963?text=Hola%2C%20quiero%20una%20hamburguesa%20🍔" target="_blank"
+         class="btn rounded-pill px-3 py-1 shadow-sm"
+         style="background:#25D366;border:none;color:white;font-weight:600;font-size:0.85rem;">
+         <i class="bx bxl-whatsapp"></i> Pedir
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- 🌮 PAPANACHO / NACHOS -->
+<div class="col-lg-4 col-md-6 portfolio-item filter-comidas">
+  <div class="portfolio-wrap position-relative shadow-lg rounded-4 overflow-hidden">
+    <img src="assets/img/nacho.jpeg" class="img-fluid" alt="Nachos" style="transition: transform 0.4s ease;">
+    <div class="portfolio-info text-center p-3" style="background: rgba(0, 0, 0, 0.75); color: #fff; font-size: 0.85rem;">
+      <p class="mb-1" style="color: #eee;">🌮 Elegí tu tipo de nacho</p>
+
+      <select id="nachoTipo" class="form-select text-center mb-2" style="background:#222;color:#fff;border:1px solid #ffb300;border-radius:20px;padding:6px;width:80%;margin:auto;font-size:0.8rem;" onchange="actualizarComidaLink('nacho')">
+        <option value="">-- Elegí una opción --</option>
+        <option value="Papanacho ¢3500">Papanacho ¢3500</option>
+        <option value="Nacho Carne ¢3000">Nacho de Carne ¢3000</option>
+        <option value="Nacho Pollo ¢3000">Nacho de Pollo ¢3000</option>
+        <option value="Nacho Mixto ¢3000">Nacho Mixto ¢3000</option>
+      </select>
+
+      <a id="whatsappNacho" href="https://wa.me/50685842963?text=Hola%2C%20quiero%20un%20nacho%20🌮" target="_blank"
+         class="btn rounded-pill px-3 py-1 shadow-sm"
+         style="background:#25D366;border:none;color:white;font-weight:600;font-size:0.85rem;">
+         <i class="bx bxl-whatsapp"></i> Pedir
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- 🍟 SALCHIPAPAS -->
+<div class="col-lg-4 col-md-6 portfolio-item filter-comidas">
+  <div class="portfolio-wrap position-relative shadow-lg rounded-4 overflow-hidden">
+    <img src="assets/img/salchipapas.jpg" class="img-fluid" alt="Salchipapas" style="transition: transform 0.4s ease;">
+    <div class="portfolio-info text-center p-3" style="background: rgba(0, 0, 0, 0.75); color: #fff; font-size: 0.85rem;">
+      <p class="mb-1" style="color: #eee;">🍟 Salchipapas ¢4500</p>
+      <a id="whatsappSalchipapas" href="https://wa.me/50685842963?text=Hola%2C%20quiero%20unas%20salchipapas%20🍟%20¢4500" target="_blank"
+         class="btn rounded-pill px-3 py-1 shadow-sm"
+         style="background:#25D366;border:none;color:white;font-weight:600;font-size:0.85rem;">
+         <i class="bx bxl-whatsapp"></i> Pedir
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- 🍗 DEDOS DE POLLO / PESCADO -->
+<div class="col-lg-4 col-md-6 portfolio-item filter-comidas">
+  <div class="portfolio-wrap position-relative shadow-lg rounded-4 overflow-hidden">
+    <img src="assets/img/dedos.jpg" class="img-fluid" alt="Dedos" style="transition: transform 0.4s ease;">
+    <div class="portfolio-info text-center p-3" style="background: rgba(0, 0, 0, 0.75); color: #fff; font-size: 0.85rem;">
+      <p class="mb-1" style="color: #eee;">🍗 Elegí tus dedos</p>
+
+      <select id="dedosTipo" class="form-select text-center mb-2" style="background:#222;color:#fff;border:1px solid #ffb300;border-radius:20px;padding:6px;width:80%;margin:auto;font-size:0.8rem;" onchange="actualizarComidaLink('dedos')">
+        <option value="">-- Elegí una opción --</option>
+        <option value="Dedos de Pollo ¢3000">Dedos de Pollo ¢3000</option>
+        <option value="Dedos de Pescado ¢3000">Dedos de Pescado ¢3000</option>
+      </select>
+
+      <a id="whatsappDedos" href="https://wa.me/50685842963?text=Hola%2C%20quiero%20unos%20dedos%20🍗" target="_blank"
+         class="btn rounded-pill px-3 py-1 shadow-sm"
+         style="background:#25D366;border:none;color:white;font-weight:600;font-size:0.85rem;">
+         <i class="bx bxl-whatsapp"></i> Pedir
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- 🥟 EMPANADAS -->
+<div class="col-lg-4 col-md-6 portfolio-item filter-comidas">
+  <div class="portfolio-wrap position-relative shadow-lg rounded-4 overflow-hidden">
+    <img src="assets/img/empanadas.jpg" class="img-fluid" alt="Empanadas" style="transition: transform 0.4s ease;">
+    <div class="portfolio-info text-center p-3" style="background: rgba(0, 0, 0, 0.75); color: #fff; font-size: 0.85rem;">
+      <p class="mb-1" style="color: #eee;">🥟 Elegí tu tipo de empanada</p>
+
+      <select id="empanadaTipo" class="form-select text-center mb-2" style="background:#222;color:#fff;border:1px solid #ffb300;border-radius:20px;padding:6px;width:80%;margin:auto;font-size:0.8rem;" onchange="actualizarComidaLink('empanada')">
+        <option value="">-- Elegí una opción --</option>
+        <option value="Empanada ¢2000">Empanada ¢2000</option>
+        <option value="Empanada arreglada ¢2500">Empanada arreglada ¢2500</option>
+      </select>
+
+      <a id="whatsappEmpanada" href="https://wa.me/50685842963?text=Hola%2C%20quiero%20una%20empanada%20🥟" target="_blank"
+         class="btn rounded-pill px-3 py-1 shadow-sm"
+         style="background:#25D366;border:none;color:white;font-weight:600;font-size:0.85rem;">
+         <i class="bx bxl-whatsapp"></i> Pedir
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- 🍟 ORDEN DE PAPAS -->
+<div class="col-lg-4 col-md-6 portfolio-item filter-comidas">
+  <div class="portfolio-wrap position-relative shadow-lg rounded-4 overflow-hidden">
+    <img src="assets/img/papas.jpg" class="img-fluid" alt="Orden de Papas" style="transition: transform 0.4s ease;">
+    <div class="portfolio-info text-center p-3" style="background: rgba(0, 0, 0, 0.75); color: #fff; font-size: 0.85rem;">
+      <p class="mb-1" style="color: #eee;">🍟 Orden de Papas ¢2000</p>
+      <a id="whatsappPapas" href="https://wa.me/50685842963?text=Hola%2C%20quiero%20una%20orden%20de%20papas%20🍟%20¢2000" target="_blank"
+         class="btn rounded-pill px-3 py-1 shadow-sm"
+         style="background:#25D366;border:none;color:white;font-weight:600;font-size:0.85rem;">
+         <i class="bx bxl-whatsapp"></i> Pedir
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- 🌯 BURRITOS -->
+<div class="col-lg-4 col-md-6 portfolio-item filter-comidas">
+  <div class="portfolio-wrap position-relative shadow-lg rounded-4 overflow-hidden">
+    <img src="assets/img/burritos.jpg" class="img-fluid" alt="Burritos" style="transition: transform 0.4s ease;">
+    <div class="portfolio-info text-center p-3" style="background: rgba(0, 0, 0, 0.75); color: #fff; font-size: 0.85rem;">
+      <p class="mb-1" style="color: #eee;">🌯 Burritos ¢2000</p>
+      <a id="whatsappBurritos" href="https://wa.me/50685842963?text=Hola%2C%20quiero%20unos%20burritos%20🌯%20¢2000" target="_blank"
+         class="btn rounded-pill px-3 py-1 shadow-sm"
+         style="background:#25D366;border:none;color:white;font-weight:600;font-size:0.85rem;">
+         <i class="bx bxl-whatsapp"></i> Pedir
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- 🧀 PAPAS FIESTA / PIZZERAS -->
+<div class="col-lg-4 col-md-6 portfolio-item filter-comidas">
+  <div class="portfolio-wrap position-relative shadow-lg rounded-4 overflow-hidden">
+    <img src="assets/img/pizza1.jpeg" class="img-fluid" alt="Papas Fiesta" style="transition: transform 0.4s ease;">
+    <div class="portfolio-info text-center p-3" style="background: rgba(0, 0, 0, 0.75); color: #fff; font-size: 0.85rem;">
+      <p class="mb-1" style="color: #eee;">🧀 Elegí tu tipo de papas</p>
+
+      <select id="papasTipo" class="form-select text-center mb-2" style="background:#222;color:#fff;border:1px solid #ffb300;border-radius:20px;padding:6px;width:80%;margin:auto;font-size:0.8rem;" onchange="actualizarComidaLink('papas')">
+        <option value="">-- Elegí una opción --</option>
+        <option value="Papas Fiesta ¢2800">Papas Fiesta ¢2800</option>
+        <option value="Papas Pizzeros ¢2800">Papas Pizzeros ¢2800</option>
+      </select>
+
+      <a id="whatsappPapas" href="https://wa.me/50685842963?text=Hola%2C%20quiero%20unas%20papas%20🍟" target="_blank"
+         class="btn rounded-pill px-3 py-1 shadow-sm"
+         style="background:#25D366;border:none;color:white;font-weight:600;font-size:0.85rem;">
+         <i class="bx bxl-whatsapp"></i> Pedir
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- 🌭 SALCHIDOG / SALCHITAQUITO -->
+<div class="col-lg-4 col-md-6 portfolio-item filter-comidas">
+  <div class="portfolio-wrap position-relative shadow-lg rounded-4 overflow-hidden">
+    <img src="assets/img/salchidog.jpg" class="img-fluid" alt="Salchidog" style="transition: transform 0.4s ease;">
+    <div class="portfolio-info text-center p-3" style="background: rgba(0, 0, 0, 0.75); color: #fff; font-size: 0.85rem;">
+      <p class="mb-1" style="color: #eee;">🌭 Elegí tu opción</p>
+
+      <select id="salchiTipo" class="form-select text-center mb-2" style="background:#222;color:#fff;border:1px solid #ffb300;border-radius:20px;padding:6px;width:80%;margin:auto;font-size:0.8rem;" onchange="actualizarComidaLink('salchi')">
+        <option value="">-- Elegí una opción --</option>
+        <option value="Salchidog ¢4800">Salchidog ¢4800</option>
+        <option value="Salchitaquito ¢3800">Salchitaquito ¢3800</option>
+      </select>
+
+      <a id="whatsappSalchi" href="https://wa.me/50685842963?text=Hola%2C%20quiero%20un%20salchidog%20🌭" target="_blank"
+         class="btn rounded-pill px-3 py-1 shadow-sm"
+         style="background:#25D366;border:none;color:white;font-weight:600;font-size:0.85rem;">
+         <i class="bx bxl-whatsapp"></i> Pedir
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- 🦐 MARISCOS (CAMARONES / CALAMARES) -->
+<div class="col-lg-4 col-md-6 portfolio-item filter-comidas">
+  <div class="portfolio-wrap position-relative shadow-lg rounded-4 overflow-hidden">
+    <img src="assets/img/camarones.jpg" class="img-fluid" alt="Mariscos" style="transition: transform 0.4s ease;">
+    <div class="portfolio-info text-center p-3" style="background: rgba(0, 0, 0, 0.75); color: #fff; font-size: 0.85rem;">
+      <p class="mb-1" style="color: #eee;">🦐 Elegí tu opción</p>
+
+      <select id="mariscosTipo" class="form-select text-center mb-2" style="background:#222;color:#fff;border:1px solid #ffb300;border-radius:20px;padding:6px;width:80%;margin:auto;font-size:0.8rem;" onchange="actualizarComidaLink('mariscos')">
+        <option value="">-- Elegí una opción --</option>
+        <option value="Camarones empanizados + papas ¢3000">Camarones empanizados + papas ¢3000</option>
+        <option value="Calamares empanizados + papas ¢3000">Calamares empanizados + papas ¢3000</option>
+      </select>
+
+      <a id="whatsappMariscos" href="https://wa.me/50685842963?text=Hola%2C%20quiero%20unos%20mariscos%20🦐" target="_blank"
+         class="btn rounded-pill px-3 py-1 shadow-sm"
+         style="background:#25D366;border:none;color:white;font-weight:600;font-size:0.85rem;">
+         <i class="bx bxl-whatsapp"></i> Pedir
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SCRIPT GENERAL ==================== -->
+<script>
+function actualizarComidaLink(tipo) {
+  const select = document.getElementById(tipo + "Tipo");
+  const link = document.getElementById("whatsapp" + tipo.charAt(0).toUpperCase() + tipo.slice(1));
+  const valor = select ? select.value : "";
+  let mensaje = "Hola, quiero pedir ";
+  if (valor) mensaje += valor;
+  else mensaje += "una orden de " + tipo;
+  link.href = "https://wa.me/50685842963?text=" + encodeURIComponent(mensaje);
+}
+</script>
+
+
 </section>
 
 
