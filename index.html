@@ -122,10 +122,9 @@
       " onchange="actualizarDescripcionYLink()">
         <option value="">-- Elegí un sabor --</option>
         <option value="Hawaiana">Hawaiana</option>
-        <option value="Jamón y Queso">Jamón y Queso</option>
-        <option value="Pepperoni">Pepperoni</option>
+        <option value="Clasica">Clasica</option>
+        <option value="Americana">Americana</option>
         <option value="Suprema">Suprema</option>
-        <option value="Pollo BBQ">Pollo BBQ</option>
       </select>
 
       <!-- Selector de tamaño -->
@@ -191,10 +190,9 @@ function actualizarDescripcionYLink() {
   let descripcion = "";
   let ingredientes = {
     "Hawaiana": "🍍 Jamón, piña y extra queso mozzarella.",
-    "Jamón y Queso": "🧀 Jamón premium con abundante queso derretido.",
-    "Pepperoni": "🍕 Pepperoni crujiente con salsa de tomate casera.",
-    "Suprema": "🥩 Jamón, chorizo, pepperoni, pimientos y queso.",
-    "Pollo BBQ": "🔥 Pollo a la BBQ con cebolla morada y extra queso."
+    "Clasica": "🧀 Jamón y queso.",
+    "Americana": "🍕 peperoni, queso y hongos.",
+    "Suprema": "🥩 Jamón, tocineta, carne, queso, peperoni, chile, cebolla y hongos."
   };
 
   descripcion = ingredientes[sabor] || "";
