@@ -96,191 +96,107 @@
 
   <!-- ======= PIZZAS ======= -->
 <!-- ======= PIZZAS ======= -->
-<div class="row">
+<div class="col-lg-4 col-md-6 portfolio-item filter-pizzas">
+  <div class="portfolio-wrap position-relative shadow-lg rounded-4 overflow-hidden">
+    <!-- Imagen del producto -->
+    <img src="assets/img/pizza1.jpeg" class="img-fluid" alt="Pizzas Chicken Fiesta" style="transition: transform 0.4s ease;">
 
-  <!-- 🍕 PIZZA PEQUEÑA -->
-  <div class="col-lg-4 col-md-6 portfolio-item filter-pizzas">
-    <div class="portfolio-wrap position-relative shadow-lg rounded-4 overflow-hidden">
-      <img src="assets/img/pizza1.jpeg" class="img-fluid" alt="Pizza Pequeña Chicken Fiesta">
+    <!-- Capa de información -->
+    <div class="portfolio-info text-center p-4" style="background: rgba(0, 0, 0, 0.75); color: #fff;">
+      <p class="mb-2" style="color: #eee;">Seleccioná tu sabor y tamaño 🍕</p>
 
-      <div class="portfolio-info text-center p-4" style="background: rgba(0, 0, 0, 0.8); color: #fff;">
-        <h4 class="fw-bold">Pizza Pequeña</h4>
-        <p class="mb-2" style="color: #eee;">6 Slices + Pepsi de 1.5L</p>
+      <!-- Selector de sabor -->
+      <select id="pizzaSabor" class="form-select text-center mb-3" style="
+        background: #222;
+        color: #fff;
+        border: 1px solid #ffb300;
+        border-radius: 20px;
+        padding: 8px;
+        width: 80%;
+        margin: auto;
+      " onchange="actualizarDescripcionYLink()">
+        <option value="">-- Elegí un sabor --</option>
+        <option value="Hawaiana">Hawaiana</option>
+        <option value="Jamón y Queso">Jamón y Queso</option>
+        <option value="Pepperoni">Pepperoni</option>
+        <option value="Suprema">Suprema</option>
+        <option value="Pollo BBQ">Pollo BBQ</option>
+      </select>
 
-        <!-- Selector de sabor -->
-        <div class="mb-3">
-          <select id="saborPizzaPeq" class="form-select text-center fw-bold" style="
-            background: rgba(255,255,255,0.15);
-            color: #fff;
-            border: 1px solid rgba(255,255,255,0.3);
-            border-radius: 20px;
-            padding: 8px;
-            max-width: 230px;
-            margin: 0 auto;
-          ">
-            <option value="Jamón">Jamón</option>
-            <option value="Pepperoni">Pepperoni</option>
-            <option value="Pollo BBQ">Pollo BBQ</option>
-            <option value="Hawaiana">Hawaiana</option>
-            <option value="Suprema">Suprema</option>
-          </select>
-        </div>
+      <!-- Selector de tamaño -->
+      <select id="pizzaTamano" class="form-select text-center mb-3" style="
+        background: #222;
+        color: #fff;
+        border: 1px solid #ffb300;
+        border-radius: 20px;
+        padding: 8px;
+        width: 80%;
+        margin: auto;
+      " onchange="actualizarDescripcionYLink()">
+        <option value="">-- Elegí el tamaño --</option>
+        <option value="Pequeña (6 slices + Pepsi 1.5L) ¢6500">Pequeña - ¢6500</option>
+        <option value="Mediana (8 slices + Pepsi 1.5L) ¢8500">Mediana - ¢8500</option>
+        <option value="Extra Grande (16 slices + Pepsi 2.5L) ¢10500">Extra Grande - ¢10500</option>
+      </select>
 
-        <!-- Precio -->
-        <div class="price-tag mx-auto mb-3" style="
-          background: linear-gradient(135deg, #ffb300, #ff6f00);
-          color: #fff;
-          font-weight: 700;
-          border-radius: 25px;
-          padding: 10px 24px;
-          display: inline-block;
-          font-size: 1.1rem;
-          box-shadow: 0 3px 10px rgba(0,0,0,0.4);
-        ">¢6500</div>
+      <!-- Ingredientes dinámicos -->
+      <div id="ingredientesTexto" class="mb-3" style="min-height: 40px; font-style: italic; color: #ffca3a;"></div>
 
-        <!-- Botones -->
-        <div class="portfolio-links mt-3">
-          <a href="assets/img/pizza1.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" style="color:#fff; font-size:1.6rem; margin-right:10px;">
-            <i class="bx bx-plus"></i>
-          </a>
-
-          <a id="btnPizzaPeq" href="#" target="_blank" class="btn rounded-pill px-4 py-2 shadow-sm" 
-             style="background:#25D366; border:none; color:white; font-weight:600;">
-            <i class="bx bxl-whatsapp"></i> Pedir
-          </a>
-        </div>
+      <div class="price-tag mx-auto mb-1" style="
+        background: linear-gradient(135deg, #ffb300, #ff6f00);
+        color: #fff;
+        font-weight: 700;
+        border-radius: 25px;
+        padding: 10px 24px;
+        display: inline-block;
+        font-size: 1.1rem;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+      ">
+        Pequeña ¢6500 | Mediana ¢8500 | Extra Grande ¢10500
       </div>
-    </div>
-  </div>
-
-  <!-- 🍕 PIZZA MEDIANA -->
-  <div class="col-lg-4 col-md-6 portfolio-item filter-pizzas">
-    <div class="portfolio-wrap position-relative shadow-lg rounded-4 overflow-hidden">
-      <img src="assets/img/pizza1.jpeg" class="img-fluid" alt="Pizza Mediana Chicken Fiesta">
-
-      <div class="portfolio-info text-center p-4" style="background: rgba(0, 0, 0, 0.8); color: #fff;">
-        <h4 class="fw-bold">Pizza Mediana</h4>
-        <p class="mb-2" style="color: #eee;">8 Slices + Pepsi de 1.5L</p>
-
-        <!-- Selector -->
-        <div class="mb-3">
-          <select id="saborPizzaMed" class="form-select text-center fw-bold" style="
-            background: rgba(255,255,255,0.15);
-            color: #fff;
-            border: 1px solid rgba(255,255,255,0.3);
-            border-radius: 20px;
-            padding: 8px;
-            max-width: 230px;
-            margin: 0 auto;
-          ">
-            <option value="Jamón">Jamón</option>
-            <option value="Pepperoni">Pepperoni</option>
-            <option value="Pollo BBQ">Pollo BBQ</option>
-            <option value="Hawaiana">Hawaiana</option>
-            <option value="Suprema">Suprema</option>
-          </select>
-        </div>
-
-        <!-- Precio -->
-        <div class="price-tag mx-auto mb-3" style="
-          background: linear-gradient(135deg, #ffb300, #ff6f00);
-          color: #fff;
-          font-weight: 700;
-          border-radius: 25px;
-          padding: 10px 24px;
-          display: inline-block;
-          font-size: 1.1rem;
-          box-shadow: 0 3px 10px rgba(0,0,0,0.4);
-        ">¢8500</div>
-
-        <div class="portfolio-links mt-3">
-          <a href="assets/img/pizza1.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" style="color:#fff; font-size:1.6rem; margin-right:10px;">
-            <i class="bx bx-plus"></i>
-          </a>
-
-          <a id="btnPizzaMed" href="#" target="_blank" class="btn rounded-pill px-4 py-2 shadow-sm" 
-             style="background:#25D366; border:none; color:white; font-weight:600;">
-            <i class="bx bxl-whatsapp"></i> Pedir
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 🍕 PIZZA EXTRA GRANDE -->
-  <div class="col-lg-4 col-md-6 portfolio-item filter-pizzas">
-    <div class="portfolio-wrap position-relative shadow-lg rounded-4 overflow-hidden">
-      <img src="assets/img/pizza1.jpeg" class="img-fluid" alt="Pizza Extra Grande Chicken Fiesta">
-
-      <div class="portfolio-info text-center p-4" style="background: rgba(0, 0, 0, 0.8); color: #fff;">
-        <h4 class="fw-bold">Pizza Extra Grande</h4>
-        <p class="mb-2" style="color: #eee;">16 Slices + Pepsi de 2.5L</p>
-
-        <!-- Selector -->
-        <div class="mb-3">
-          <select id="saborPizzaXL" class="form-select text-center fw-bold" style="
-            background: rgba(255,255,255,0.15);
-            color: #fff;
-            border: 1px solid rgba(255,255,255,0.3);
-            border-radius: 20px;
-            padding: 8px;
-            max-width: 230px;
-            margin: 0 auto;
-          ">
-            <option value="Jamón">Jamón</option>
-            <option value="Pepperoni">Pepperoni</option>
-            <option value="Pollo BBQ">Pollo BBQ</option>
-            <option value="Hawaiana">Hawaiana</option>
-            <option value="Suprema">Suprema</option>
-          </select>
-        </div>
-
-        <!-- Precio -->
-        <div class="price-tag mx-auto mb-3" style="
-          background: linear-gradient(135deg, #ffb300, #ff6f00);
-          color: #fff;
-          font-weight: 700;
-          border-radius: 25px;
-          padding: 10px 24px;
-          display: inline-block;
-          font-size: 1.1rem;
-          box-shadow: 0 3px 10px rgba(0,0,0,0.4);
-        ">¢10500</div>
-
-        <div class="portfolio-links mt-3">
-          <a href="assets/img/pizza1.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" style="color:#fff; font-size:1.6rem; margin-right:10px;">
-            <i class="bx bx-plus"></i>
-          </a>
-
-          <a id="btnPizzaXL" href="#" target="_blank" class="btn rounded-pill px-4 py-2 shadow-sm" 
-             style="background:#25D366; border:none; color:white; font-weight:600;">
-            <i class="bx bxl-whatsapp"></i> Pedir
-          </a>
-        </div>
+      <!-- Botón WhatsApp -->
+      <div class="portfolio-links mt-3">
+        <a id="whatsappLink" 
+           href="https://wa.me/50685842963?text=Hola%2C%20quiero%20pedir%20una%20Pizza%20de%20Chicken%20Fiesta%20🍕" 
+           target="_blank" 
+           class="btn rounded-pill px-4 py-2 shadow-sm" 
+           style="background:#25D366; border:none; color:white; font-weight:600;">
+          <i class="bx bxl-whatsapp"></i> Pedir
+        </a>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Script para actualizar WhatsApp según sabor -->
 <script>
-  function configurarBotonPizza(selectId, btnId, tamano) {
-    const select = document.getElementById(selectId);
-    const btn = document.getElementById(btnId);
+function actualizarDescripcionYLink() {
+  const sabor = document.getElementById("pizzaSabor").value;
+  const tamano = document.getElementById("pizzaTamano").value;
+  const texto = document.getElementById("ingredientesTexto");
+  const link = document.getElementById("whatsappLink");
 
-    function actualizarEnlace() {
-      const sabor = encodeURIComponent(select.value);
-      const texto = `Hola%2C%20quiero%20pedir%20una%20Pizza%20${tamano}%20de%20${sabor}%20🍕`;
-      btn.href = `https://wa.me/50685842963?text=${texto}`;
-    }
+  let descripcion = "";
+  let ingredientes = {
+    "Hawaiana": "🍍 Jamón, piña y extra queso mozzarella.",
+    "Jamón y Queso": "🧀 Jamón premium con abundante queso derretido.",
+    "Pepperoni": "🍕 Pepperoni crujiente con salsa de tomate casera.",
+    "Suprema": "🥩 Jamón, chorizo, pepperoni, pimientos y queso.",
+    "Pollo BBQ": "🔥 Pollo a la BBQ con cebolla morada y extra queso."
+  };
 
-    select.addEventListener('change', actualizarEnlace);
-    actualizarEnlace(); // Inicializa con el valor por defecto
-  }
+  descripcion = ingredientes[sabor] || "";
 
-  configurarBotonPizza('saborPizzaPeq', 'btnPizzaPeq', 'Pequeña');
-  configurarBotonPizza('saborPizzaMed', 'btnPizzaMed', 'Mediana');
-  configurarBotonPizza('saborPizzaXL', 'btnPizzaXL', 'Extra%20Grande');
+  // Mostrar descripción
+  texto.innerHTML = sabor ? descripcion : "";
+
+  // Crear mensaje para WhatsApp
+  let mensaje = "Hola, quiero pedir una Pizza de Chicken Fiesta 🍕";
+  if (sabor) mensaje += " sabor " + sabor;
+  if (tamano) mensaje += " tamaño " + tamano;
+
+  // Actualizar enlace de WhatsApp
+  link.href = "https://wa.me/50685842963?text=" + encodeURIComponent(mensaje);
+}
 </script>
 
 
