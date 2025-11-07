@@ -94,7 +94,6 @@
     <!-- ======= Contenido ======= -->
     <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-  <!-- ======= PIZZAS ======= -->
 <!-- ======= PIZZAS ======= -->
 <div class="col-lg-4 col-md-6 portfolio-item filter-pizzas">
   <div class="portfolio-wrap position-relative shadow-lg rounded-4 overflow-hidden">
@@ -102,18 +101,24 @@
     <img src="assets/img/pizza1.jpeg" class="img-fluid" alt="Pizzas Chicken Fiesta" style="transition: transform 0.4s ease;">
 
     <!-- Capa de información -->
-    <div class="portfolio-info text-center p-4" style="background: rgba(0, 0, 0, 0.75); color: #fff;">
-      <p class="mb-2" style="color: #eee;">Seleccioná tu sabor y tamaño 🍕</p>
+    <div class="portfolio-info text-center p-3" style="
+      background: rgba(0, 0, 0, 0.75); 
+      color: #fff; 
+      font-size: 0.85rem;        /* 🔹 Letra más pequeña */
+      line-height: 1.2;          /* 🔹 Texto más junto */
+    ">
+      <p class="mb-1" style="color: #eee;">Seleccioná tu sabor y tamaño 🍕</p>
 
       <!-- Selector de sabor -->
-      <select id="pizzaSabor" class="form-select text-center mb-3" style="
+      <select id="pizzaSabor" class="form-select text-center mb-2" style="
         background: #222;
         color: #fff;
         border: 1px solid #ffb300;
         border-radius: 20px;
-        padding: 8px;
+        padding: 6px;
         width: 80%;
         margin: auto;
+        font-size: 0.8rem;       /* 🔹 Texto select más pequeño */
       " onchange="actualizarDescripcionYLink()">
         <option value="">-- Elegí un sabor --</option>
         <option value="Hawaiana">Hawaiana</option>
@@ -124,14 +129,15 @@
       </select>
 
       <!-- Selector de tamaño -->
-      <select id="pizzaTamano" class="form-select text-center mb-3" style="
+      <select id="pizzaTamano" class="form-select text-center mb-2" style="
         background: #222;
         color: #fff;
         border: 1px solid #ffb300;
         border-radius: 20px;
-        padding: 8px;
+        padding: 6px;
         width: 80%;
         margin: auto;
+        font-size: 0.8rem;
       " onchange="actualizarDescripcionYLink()">
         <option value="">-- Elegí el tamaño --</option>
         <option value="Pequeña (6 slices + Pepsi 1.5L) ¢6500">Pequeña - ¢6500</option>
@@ -140,33 +146,40 @@
       </select>
 
       <!-- Ingredientes dinámicos -->
-      <div id="ingredientesTexto" class="mb-3" style="min-height: 40px; font-style: italic; color: #ffca3a;"></div>
+      <div id="ingredientesTexto" class="mb-2" style="
+        min-height: 30px; 
+        font-style: italic; 
+        color: #ffca3a; 
+        font-size: 0.8rem;
+      "></div>
 
       <div class="price-tag mx-auto mb-1" style="
         background: linear-gradient(135deg, #ffb300, #ff6f00);
         color: #fff;
         font-weight: 700;
         border-radius: 25px;
-        padding: 10px 24px;
+        padding: 6px 18px;
         display: inline-block;
-        font-size: 1.1rem;
+        font-size: 0.9rem;
         box-shadow: 0 3px 10px rgba(0,0,0,0.4);
       ">
         Pequeña ¢6500 | Mediana ¢8500 | Extra Grande ¢10500
       </div>
+
       <!-- Botón WhatsApp -->
-      <div class="portfolio-links mt-3">
+      <div class="portfolio-links mt-2">
         <a id="whatsappLink" 
            href="https://wa.me/50685842963?text=Hola%2C%20quiero%20pedir%20una%20Pizza%20de%20Chicken%20Fiesta%20🍕" 
            target="_blank" 
-           class="btn rounded-pill px-4 py-2 shadow-sm" 
-           style="background:#25D366; border:none; color:white; font-weight:600;">
+           class="btn rounded-pill px-3 py-1 shadow-sm" 
+           style="background:#25D366; border:none; color:white; font-weight:600; font-size:0.85rem;">
           <i class="bx bxl-whatsapp"></i> Pedir
         </a>
       </div>
     </div>
   </div>
 </div>
+
 
 <script>
 function actualizarDescripcionYLink() {
